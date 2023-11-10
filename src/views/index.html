@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    <%= htmlWebpackPlugin.options.title %> | Social Media App
+  </title>
+</head>
+
+<body>
+  <header>
+    <header-app></header-app>
+  </header>
+
+  <main>
+    <main-app>
+      <div class='row justify-content-md-center'>
+        <story-form data-bs-toggle="modal" data-bs-target="#statusModal"></story-form>
+      </div>
+      <div class='row justify-content-md-center'>
+        <card-list></card-list>
+      </div>
+    </main-app>
+    <modal-card id="statusModal" data-bs-keyboard="false" tabindex="-1"></modal-card>
+    <floating-home></floating-home>
+  </main>
+
+  <footer>
+    <footer-app></footer-app>
+  </footer>
+</body>
+
+</html>

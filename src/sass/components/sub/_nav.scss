@@ -1,0 +1,36 @@
+@use '../../variables' as var;
+
+@mixin part_color {
+    color:var.$part-color;
+}
+
+nav {
+    font-size: 1.2em;
+
+    .active {
+        background-color: var.$part-color !important;
+        border-radius: 20px !important;
+        color:var.$dark-color !important;
+    }
+
+    .nav-link {
+        @include part_color();
+        font-weight: bold;
+    }
+
+    a {
+        &:hover, &:focus {
+            color: var.$main-color !important;
+        }
+
+        :active {
+            @include part_color();
+        }
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5em;
+    justify-content: right;
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="en" source-language="id" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s09692bbd4ff4dec4">
+  <source>Dibuat oleh AF Creative</source>
+</trans-unit>
+<trans-unit id="s7fc072d163bf5ea1">
+  <source>Halaman Utama</source>
+</trans-unit>
+<trans-unit id="sb3f32662a9054673">
+  <source>Informasi</source>
+</trans-unit>
+<trans-unit id="sa02d94fa5282edbf">
+  <source>Profil</source>
+</trans-unit>
+<trans-unit id="s229fb4df9ecf3ed1">
+  <source>Keluar</source>
+</trans-unit>
+<trans-unit id="s1a2dea8f763a83ed">
+  <source>Januari</source>
+</trans-unit>
+<trans-unit id="sbc084a1dbee9caa3">
+  <source>Februari</source>
+</trans-unit>
+<trans-unit id="s5066d10b53af54fa">
+  <source>Maret</source>
+</trans-unit>
+<trans-unit id="scb6b9cb49cf93277">
+  <source>April</source>
+</trans-unit>
+<trans-unit id="s1e266819b5325a6a">
+  <source>Mei</source>
+</trans-unit>
+<trans-unit id="s15a856e9f9a51671">
+  <source>Juni</source>
+</trans-unit>
+<trans-unit id="s15a17ae9f99f34ef">
+  <source>Juli</source>
+</trans-unit>
+<trans-unit id="s929b52b8557349bb">
+  <source>Agustus</source>
+</trans-unit>
+<trans-unit id="s39938ecdae568740">
+  <source>September</source>
+</trans-unit>
+<trans-unit id="sc41ec5bc047a7f6f">
+  <source>Oktober</source>
+</trans-unit>
+<trans-unit id="s281846ef0421c71f">
+  <source>November</source>
+</trans-unit>
+<trans-unit id="s94cb85ff956a716e">
+  <source>Desember</source>
+</trans-unit>
+<trans-unit id="s9654a476127b836e">
+  <source>detik</source>
+</trans-unit>
+<trans-unit id="se8dfa5c7d7284eb6">
+  <source>menit</source>
+</trans-unit>
+<trans-unit id="s45847f193a784bdb">
+  <source>jam</source>
+</trans-unit>
+<trans-unit id="s2e3ab9cc7418701b">
+  <source>hari</source>
+</trans-unit>
+<trans-unit id="s479656f8ede33ac8">
+  <source>Diposting</source>
+</trans-unit>
+<trans-unit id="s0467d1ad9066b959">
+  <source>lalu</source>
+</trans-unit>
+</body>
+</file>
+</xliff>

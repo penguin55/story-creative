@@ -1,0 +1,35 @@
+@use '../../variables' as var;
+
+.card {
+    overflow: hidden;
+    .image-post {
+        cursor: pointer;
+    } 
+}
+
+.card-head {
+    img {
+        height: 50px;
+    }
+
+    section h5 {
+        margin: 0px;
+    }
+
+    section .card-text {
+        font-size: 0.8em;
+    }
+}
+
+.card-footer {
+    background-color: var.$second-color;
+    border-style: none;
+
+    .text-comment {
+        color: var.$main-color;
+    }
+
+    .text-share {
+        color: var.$part-color;
+    }
+}
