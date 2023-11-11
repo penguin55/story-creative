@@ -23,7 +23,7 @@ class StoryForm extends CustomLitElementWSD {
             <form>
                 <section class="card-head d-flex p-4 gap-3">
                     <img class="rounded-circle" src="https://ui-avatars.com/api/?name=Ari+Utomo" alt="Ari Utomo">
-                    <textarea readonly placeholder="Ada cerita apa hari ini?" class="form-control"></textarea>
+                    <textarea readonly placeholder="${msg('Ada cerita apa hari ini?')}" class="form-control"></textarea>
                 </section>
                 <section class="card-line"></section>
                 <section class="card-body">

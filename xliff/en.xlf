@@ -4,72 +4,107 @@
 <body>
 <trans-unit id="s09692bbd4ff4dec4">
   <source>Dibuat oleh AF Creative</source>
+  <target>Created by AF Creative</target>
 </trans-unit>
 <trans-unit id="s7fc072d163bf5ea1">
   <source>Halaman Utama</source>
-</trans-unit>
-<trans-unit id="sb3f32662a9054673">
-  <source>Informasi</source>
+  <target>Homepage</target>
 </trans-unit>
 <trans-unit id="sa02d94fa5282edbf">
   <source>Profil</source>
+  <target>Profile</target>
 </trans-unit>
 <trans-unit id="s229fb4df9ecf3ed1">
   <source>Keluar</source>
+  <target>Logout</target>
 </trans-unit>
 <trans-unit id="s1a2dea8f763a83ed">
   <source>Januari</source>
+  <target>January</target>
 </trans-unit>
 <trans-unit id="sbc084a1dbee9caa3">
   <source>Februari</source>
+  <target>February</target>
 </trans-unit>
 <trans-unit id="s5066d10b53af54fa">
   <source>Maret</source>
+  <target>March</target>
 </trans-unit>
 <trans-unit id="scb6b9cb49cf93277">
   <source>April</source>
+  <target>April</target>
 </trans-unit>
 <trans-unit id="s1e266819b5325a6a">
   <source>Mei</source>
+  <target>May</target>
 </trans-unit>
 <trans-unit id="s15a856e9f9a51671">
   <source>Juni</source>
+  <target>June</target>
 </trans-unit>
 <trans-unit id="s15a17ae9f99f34ef">
   <source>Juli</source>
+  <target>July</target>
 </trans-unit>
 <trans-unit id="s929b52b8557349bb">
   <source>Agustus</source>
+  <target>August</target>
 </trans-unit>
 <trans-unit id="s39938ecdae568740">
   <source>September</source>
+  <target>September</target>
 </trans-unit>
 <trans-unit id="sc41ec5bc047a7f6f">
   <source>Oktober</source>
+  <target>October</target>
 </trans-unit>
 <trans-unit id="s281846ef0421c71f">
   <source>November</source>
+  <target>November</target>
 </trans-unit>
 <trans-unit id="s94cb85ff956a716e">
   <source>Desember</source>
+  <target>December</target>
 </trans-unit>
 <trans-unit id="s9654a476127b836e">
   <source>detik</source>
+  <target>seconds</target>
 </trans-unit>
 <trans-unit id="se8dfa5c7d7284eb6">
   <source>menit</source>
+  <target>minutes</target>
 </trans-unit>
 <trans-unit id="s45847f193a784bdb">
   <source>jam</source>
+  <target>hours</target>
 </trans-unit>
 <trans-unit id="s2e3ab9cc7418701b">
   <source>hari</source>
+  <target>days</target>
 </trans-unit>
 <trans-unit id="s479656f8ede33ac8">
   <source>Diposting</source>
+  <target>Posted on</target>
 </trans-unit>
 <trans-unit id="s0467d1ad9066b959">
   <source>lalu</source>
+  <target>ago</target>
+</trans-unit>
+<trans-unit id="s6452adaed76e8347">
+  <source>Unggah Gambar</source>
+  <target>Upload Image</target>
+</trans-unit>
+<trans-unit id="sd1b1e9ceb885dc52">
+  <source>Tambah Status</source>
+  <target>Add Status</target> 
+</trans-unit>
+<trans-unit id="s670dc0ab47ca2270">
+  <source>Unggah Postingan</source>
+  <target>Upload</target>
+</trans-unit>
+<trans-unit id="s13b983bb32e7343a">
+  <source>Ada cerita apa hari ini?</source>
+  <target>What the story of today?</target>
 </trans-unit>
 </body>
 </file>

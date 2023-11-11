@@ -11,12 +11,13 @@ class NavLinks extends CustomLitElementWSD {
     }
 
     initComponent(){
-        let classes = "d-block ms-auto";
+        let classes = "d-flex ms-auto gap-5";
         classes.split(" ").forEach((classSplit) => this.classList.add(classSplit));
     }
 
     render() {
         return html`
+            <slot name="locale-picker"/>
             <nav>
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link ${this.activeNav == "home" ? "active" : ""}" href="/">${msg(`Halaman Utama`)}</a></li>

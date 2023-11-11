@@ -10,3 +10,4 @@ import './sub/SocialCard';
 import './sub/StoryForm';
 import './sub/ModalCard';
 import './sub/FloatingHome';
+import './sub/LocalePicker';

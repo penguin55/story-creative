@@ -14,7 +14,9 @@ class HeaderApp extends CustomLitElementWSD {
     render() {
         return html`
             <section class="d-flex align-self-center"><img class="app-logo" src="./img/Creative-Social-Logo.png" alt="Creative Social Logo"></section>
-            <nav-links></nav-links>`;
+            <nav-links>
+                <locale-picker slot='locale-picker'></locale-picker>
+            </nav-links>`;
     }
 }
 
