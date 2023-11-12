@@ -106,6 +106,14 @@
   <source>Ada cerita apa hari ini?</source>
   <target>What the story of today?</target>
 </trans-unit>
+<trans-unit id="saca1bb9c1da8e7da">
+  <source>Tambah Cerita</source>
+  <target>Add Story</target>
+</trans-unit>
+<trans-unit id="se3e8e6f8e6706c32">
+  <source>Tidak Ada Data</source>
+  <target>No Data Found</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

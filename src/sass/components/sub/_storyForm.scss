@@ -1,14 +1,27 @@
+@use '../../variables' as var;
+
 story-form {
     margin-bottom: 4em;
+
     .card-head {
         padding-bottom: 0px !important;
+
         textarea {
-            resize: none; 
+            resize: vertical;
+            min-height: 50px;
             height: 50px;
+            max-height: 200px;
             padding-bottom: 15px;
-            border-radius: 50px;
+            border-radius: 20px;
             padding: 12px 25px;
         }
+    }
+
+    #card-preview {
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 500px;
+        background-position: center;
     }
 
     .card-line {
@@ -21,7 +34,7 @@ story-form {
     .card-body {
         padding: 0;
         margin-inline: 1em;
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
 
         .upload {
             right: calc(0% + 25px);
@@ -30,9 +43,28 @@ story-form {
 
             #upload-image {
                 font-size: 1em;
+                color: var.$second-color;
+                cursor: pointer;
+                ;
             }
         }
     }
 
-    
+    .card-foot {
+        margin-inline: 1em 2em;
+        margin-bottom: 1.3em;
+        text-align: right;
+    }
+
+    .btn-upload {
+        background-color: var.$part-color;
+        font-weight: bold;
+        color: var.$dark-color;
+        border-radius: 20px;
+
+        &:focus {
+            background-color: var.$part-color;
+        }
+    }
+
 }

@@ -1,5 +1,7 @@
 import { configureLocalization } from '@lit/localize';
 import { sourceLocale, targetLocales } from '../generated/locale-codes';
+
+const LANGUAGE_KEY = "LANGUAGE";
  
 export const { getLocale, setLocale } = configureLocalization({
   sourceLocale,
@@ -10,12 +12,22 @@ export const { getLocale, setLocale } = configureLocalization({
 });
  
 export const setLocaleLang = async (lang) => {
-  const locale = lang;
- 
-  console.log('setLocaleFromUrl', locale);
-  console.log('getLocale', getLocale());
-  await setLocale(locale);
+  sessionStorage.setItem(LANGUAGE_KEY, lang);
+  await setLocale(lang);
 };
+
+export const getLocaleLang = () => {
+  if (typeof (Storage) !== 'undefined') {
+    if (sessionStorage.getItem(LANGUAGE_KEY) === null) {
+      sessionStorage.setItem(LANGUAGE_KEY, 'id');
+    }
+
+    let locale = sessionStorage.getItem(LANGUAGE_KEY);
+    return locale;
+  }
+
+  return 'id';
+}
  
 export const localeNames = {
   en: 'Inggris',

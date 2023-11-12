@@ -22,7 +22,7 @@ class CardList extends CustomLitElementWSD {
                 return html`<social-card status-data="${JSON.stringify(item)}"></social-card>`;
             })}`;
         } else {
-            return html`<p class='text-center'>NO DATA FOUND</p>`;
+            return html`<p class='text-center'>${msg("Tidak Ada Data")}</p>`;
         }
     }
 }

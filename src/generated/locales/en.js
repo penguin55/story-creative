@@ -30,10 +30,12 @@
 's94cb85ff956a716e': `December`,
 's9654a476127b836e': `seconds`,
 'sa02d94fa5282edbf': `Profile`,
+'saca1bb9c1da8e7da': `Add Story`,
 'sbc084a1dbee9caa3': `February`,
 'sc41ec5bc047a7f6f': `October`,
 'scb6b9cb49cf93277': `April`,
 'sd1b1e9ceb885dc52': `Add Status`,
+'se3e8e6f8e6706c32': `No Data Found`,
 'se8dfa5c7d7284eb6': `minutes`,
     };
   

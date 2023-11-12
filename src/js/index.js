@@ -10,9 +10,11 @@ import './components'
 
 // Import Pages
 import Homepage from './pages/Homepage'
+import AddStory from './pages/AddStory'
 
 const routes = {
     '/': Homepage,
+    '/AddStory.html': AddStory,
 };
 
 const detectRoute = () => routes[window.location.pathname];

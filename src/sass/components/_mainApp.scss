@@ -7,7 +7,10 @@ html:not([data-scroll='0']) {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var.$main-color;
+    min-height: 100vh;
 }
 
 main-app {
@@ -25,12 +28,15 @@ header-app{
     }
 }
 
-footer-app {
-    background-color: var.$part-color;
-    display: block;
-    padding: 2.5em;
-    text-align: center;
-    margin: 0;
+footer {
+    margin-top: auto;
+    footer-app {
+        background-color: var.$part-color;
+        display: block;
+        padding: 2.5em;
+        text-align: center;
+        margin: 0;
+    }
 }
 
 card-list {

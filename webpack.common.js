@@ -47,7 +47,14 @@ module.exports = {
         viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
       },
     }),
-    
+    new HtmlWebpackPlugin({
+      title: 'Add Story',
+      filename: 'AddStory.html',
+      template: path.resolve(__dirname, 'src/views/AddStory.html'),
+      meta: {
+        viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+      },
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {

@@ -21,6 +21,7 @@ class NavLinks extends CustomLitElementWSD {
             <nav>
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link ${this.activeNav == "home" ? "active" : ""}" href="/">${msg(`Halaman Utama`)}</a></li>
+                    <li class="nav-item"><a class="nav-link ${this.activeNav == "add_story" ? "active" : ""}" href="/AddStory.html">${msg(`Tambah Cerita`)}</a></li>
                     <li class="nav-item"><a class="nav-link ${this.activeNav == "profile" ? "active" : ""}" href="#">${msg(`Profil`)}</a></li>
                     <li class="nav-item"><a class="nav-link ${this.activeNav == "logout" ? "active" : ""}" href="#">${msg(`Keluar`)}</a></li>
                 </ul>

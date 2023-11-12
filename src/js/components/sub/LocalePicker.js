@@ -1,8 +1,11 @@
 import { CustomLitElement, html, css } from '../base/CustomLitElement'
 import { allLocales } from '../../../generated/locale-codes';
-import { getLocale, localeNames, setLocaleLang } from '../../localization.js';
+import { getLocale, getLocaleLang, setLocaleLang } from '../../localization.js';
 
 class LocalePicker extends CustomLitElement {
+    static properties = {
+        lang: { type: String }
+    }
 
     static styles = css`
         :host{
@@ -37,13 +40,24 @@ class LocalePicker extends CustomLitElement {
             width: 55%;
             height: 100%;
             top:0%;
-            left:0%;
+            left:100%;
             background-color: #90adc6;
             transition: ease 0.5s;
+            transform: translateX(-100%);
+        }
+
+        .active {
+            left:0% !important;
+            transform: translateX(0%) !important;
         }
     `;
     constructor() {
         super();
+
+        this.lang = getLocaleLang();
+        if (this.lang !== getLocale()) {
+            setLocaleLang(this.lang);
+        }      
     }
 
     render() {
@@ -53,26 +67,18 @@ class LocalePicker extends CustomLitElement {
                 <span>EN</span>
                 <span>ID</span>
             </section>
-            <section class="toggle-button"></section>
+            <section class="toggle-button${this.lang == 'id' ? " active" : ""}"></section>
         </button>
     `;
     }
 
     _localeChanged(event) {
-        let toggleButton = this.shadowRoot.querySelector(".toggle-button");
-        let active = toggleButton.classList.contains('active');
-        if (active) {
-            toggleButton.classList.remove('active');
-        } else {
-            toggleButton.classList.add('active');
-        }
-        toggleButton.style.left = !active ? '100%' : '0%';
-        toggleButton.style.transform = active ? 'translateX(0%)':'translateX(-100%)';
+        let activeLang = this.lang;
 
-        const newLocale = active ? 'id' : 'en';
+        this.lang = activeLang == 'id' ? 'en' : 'id';
 
-        if (newLocale !== getLocale()) {
-            setLocaleLang(newLocale);
+        if (this.lang !== getLocale()) {
+            setLocaleLang(this.lang);
         }
     }
 }
