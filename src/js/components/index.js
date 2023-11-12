@@ -8,6 +8,5 @@ import './sub/NavLinks';
 import './sub/CardList';
 import './sub/SocialCard';
 import './sub/StoryForm';
-import './sub/ModalCard';
 import './sub/FloatingHome';
 import './sub/LocalePicker';
