@@ -10,3 +10,7 @@ import './sub/SocialCard';
 import './sub/StoryForm';
 import './sub/FloatingHome';
 import './sub/LocalePicker';
+import './sub/InputValidation';
+import './sub/DropdownUser';
+import './sub/LoginRegister';
+import './sub/ModalMessage';

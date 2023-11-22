@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, nothing } from 'lit';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
 class CustomLitElement extends LitElement {
@@ -8,4 +8,4 @@ class CustomLitElement extends LitElement {
     }
 }
 
-export {CustomLitElement, html, css, msg};
+export {CustomLitElement, html, css, msg, nothing};

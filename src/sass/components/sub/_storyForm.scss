@@ -55,16 +55,4 @@ story-form {
         margin-bottom: 1.3em;
         text-align: right;
     }
-
-    .btn-upload {
-        background-color: var.$part-color;
-        font-weight: bold;
-        color: var.$dark-color;
-        border-radius: 20px;
-
-        &:focus {
-            background-color: var.$part-color;
-        }
-    }
-
 }

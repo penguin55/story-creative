@@ -1,9 +1,9 @@
-import {FetchData} from '../FetchData'
+import CheckUserAuth from './auth/CheckUserAuth';
 
 const AddStory = {
     async init() {
+      CheckUserAuth.checkLoginState();
       await this._initialData();
-
     },
   
     async _initialData() {

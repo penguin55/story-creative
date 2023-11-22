@@ -18,7 +18,7 @@ class CardList extends CustomLitElementWSD {
     render() {
         console.log(this.data);
         if (this.data) {
-            return html `${this.data.listStory.map((item) => {
+            return html `${this.data.map((item) => {
                 return html`<social-card status-data="${JSON.stringify(item)}"></social-card>`;
             })}`;
         } else {

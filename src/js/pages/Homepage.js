@@ -1,28 +1,28 @@
-import {FetchData} from '../FetchData'
+import { Stories } from "../network/connection";
+import CheckUserAuth from './auth/CheckUserAuth';
 
 const Homepage = {
     async init() {
-      await this._initialData();
-
+        CheckUserAuth.checkLoginState();
+        await this._initialData();
     },
-  
+
     async _initialData() {
         this._fetchData();
         let nav = document.querySelector('nav-links');
         nav.activeNav = "home";
     },
 
-    _fetchData(){
-        let dataRaw = FetchData.get('https://raw.githubusercontent.com/dicodingacademy/a565-webtools-labs/099-shared-files/proyek-awal/DATA.json');
-        dataRaw.then((dataJSON) => {
-            this._populateData(dataJSON)
-        }).catch((er)=> { console.log(er); });
+    async _fetchData() {
+        let response = await Stories.getAll();
+        let data = response.data;
+        this._populateData(data.listStory);
     },
 
-    _populateData(data){
+    _populateData(data) {
         let cardList = document.querySelector('card-list');
         cardList.data = data;
     }
-  };
-  
-  export default Homepage;
+};
+
+export default Homepage;

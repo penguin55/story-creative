@@ -1,0 +1,17 @@
+.dropdown {
+    .dropdown-toggle div {
+        width: fit-content !important;
+    }
+
+    .dropdown-toggle::after {
+        content: none;
+        display: none;
+    }
+}
+
+.dropdown-menu {
+    a:hover {
+        cursor: pointer;
+        color: black !important;
+    }
+}

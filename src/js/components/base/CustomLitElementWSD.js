@@ -1,4 +1,4 @@
-import {CustomLitElement, html, css, msg} from './CustomLitElement';
+import {CustomLitElement, html, css, msg, nothing, updateWhenLocaleChanges} from './CustomLitElement';
 
 class CustomLitElementWSD extends CustomLitElement {
     createRenderRoot() {
@@ -6,4 +6,4 @@ class CustomLitElementWSD extends CustomLitElement {
     }
 }
 
-export {CustomLitElementWSD, html, css, msg};
+export {CustomLitElementWSD, html, css, msg, nothing};

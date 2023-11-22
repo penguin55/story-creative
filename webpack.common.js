@@ -49,12 +49,30 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Add Story',
-      filename: 'AddStory.html',
+      filename: 'addStory.html',
       template: path.resolve(__dirname, 'src/views/AddStory.html'),
       meta: {
         viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
       },
     }),
+    // Auth pages
+    new HtmlWebpackPlugin({
+      title: 'Login',
+      filename: 'login.html',
+      template: path.resolve(__dirname, 'src/views/auth/Login.html'),
+      meta: {
+        viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+      },
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Register',
+      filename: 'register.html',
+      template: path.resolve(__dirname, 'src/views/auth/Register.html'),
+      meta: {
+        viewport: 'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+      },
+    }),
+
     new CopyWebpackPlugin({
       patterns: [
         {

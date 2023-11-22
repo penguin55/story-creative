@@ -11,10 +11,14 @@ import './components'
 // Import Pages
 import Homepage from './pages/Homepage'
 import AddStory from './pages/AddStory'
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 
 const routes = {
     '/': Homepage,
-    '/AddStory.html': AddStory,
+    '/addStory.html': AddStory,
+    '/login.html': Login,
+    '/register.html': Register,
 };
 
 const detectRoute = () => routes[window.location.pathname];

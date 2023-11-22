@@ -1,5 +1,5 @@
 import { CustomLitElementWSD, html, css, msg } from '../base/CustomLitElementWSD'
-import {PostDate} from '../../PostDate'
+import {PostDate} from '../../post-date'
 import 'bootstrap';
 
 class SocialCard extends CustomLitElementWSD {
