@@ -1,6 +1,8 @@
 import { Auth } from "../../network/connection";
 import CheckUserAuth from "./CheckUserAuth";
 
+import * as bootstrap from 'bootstrap';
+
 const Register = {
     async init() {
         CheckUserAuth.checkLoginState();
@@ -15,6 +17,14 @@ const Register = {
 
     _initialListener() {
         const registerForm = document.querySelector('#registerForm');
+        const passwordField = document.querySelector('#validationCustomPassword');
+        const passwordConfirmationField = document.querySelector('#validationConfirmationPassword');
+        const feedbackField = document.querySelector('#feedback-validationCustomPassword');
+        const feedbackConfirmationField = document.querySelector('#feedback-validationConfirmationPassword');
+        const popupModal = document.querySelector('#register-modal');
+
+        const registerModal = new bootstrap.Modal(popupModal, {});
+
         registerForm.addEventListener(
             'submit',
             async (event) => {
@@ -23,10 +33,43 @@ const Register = {
 
 
                 registerForm.classList.add('was-validated');
-                await this._getRegistered();
+                if (passwordField.value == passwordConfirmationField.value && passwordField.value.length >= 8)
+                    await this._getRegistered();
+                else {
+                    popupModal.parentElement.modalType = 'warn';
+                    popupModal.parentElement.message = "Cek kembali password, minimal 8 karakter.";
+
+                    registerModal.show();
+                }
             },
             false,
         );
+
+        passwordField.addEventListener('input', (event) => {
+            let inputNode = event.target;
+            
+            if (inputNode.value.length < 8) {
+                if (feedbackField.classList.contains('d-none')) feedbackField.classList.remove('d-none');
+                feedbackField.innerHTML = "Password minimal 8 karakter.";
+            } else {
+                if (!feedbackField.classList.contains('d-none')) feedbackField.classList.add('d-none');
+                feedbackField.innerHTML = '';
+            }
+
+        });
+
+        passwordConfirmationField.addEventListener('input', (event) => {
+            let inputNode = event.target;
+            
+            if (inputNode.value != passwordField.value) {
+                if (feedbackConfirmationField.classList.contains('d-none')) feedbackConfirmationField.classList.remove('d-none');
+                feedbackConfirmationField.innerHTML = "Password tidak sama.";
+            } else {
+                if (!feedbackConfirmationField.classList.contains('d-none')) feedbackConfirmationField.classList.add('d-none');
+                feedbackConfirmationField.innerHTML = '';
+            }
+
+        });
     },
 
     async _getRegistered() {
@@ -34,6 +77,9 @@ const Register = {
         const submitButton = document.querySelector('#submit-button');
         const spinner = document.querySelector('#spinner');
         const buttonText = document.querySelector('#button-text');
+        const popupModal = document.querySelector('#register-modal');
+
+        const registerModal = new bootstrap.Modal(popupModal, {});
 
         submitButton.setAttribute('disabled', true);
         spinner.classList.remove('visually-hidden');
@@ -51,7 +97,11 @@ const Register = {
                 });
                 this._goToLoginPage();
             } catch (error) {
-                console.error(error);
+                popupModal.parentElement.modalType = 'warn';
+                popupModal.parentElement.message = error.response.data.message;
+
+                registerModal.show();
+
                 submitButton.removeAttribute('disabled');
                 spinner.classList.add('visually-hidden');
                 buttonText.classList.remove('visually-hidden');

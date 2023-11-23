@@ -53,6 +53,7 @@ class LoginRegister extends CustomLitElementWSD {
                 </div>
             </div>
         </div>
+        <modal-message modalId="login-modal"></modal-message>
         `;
     }
 
@@ -66,7 +67,8 @@ class LoginRegister extends CustomLitElementWSD {
                     <form class="pb-3 pt-3" id="registerForm" novalidate>
                         <input-validation label="${msg("Nama")}" type="text" inputId="validationCustomRecordName" invalidFeedbackMessage="Wajib Diisi" required></input-validation>
                         <input-validation label="${msg("Email")}" type="email" inputId="validationCustomEmail" invalidFeedbackMessage="Wajib Diisi" required></input-validation>
-                        <input-validation label="${msg("Password")}" type="password" inputId="validationCustomPassword" invalidFeedbackMessage="Wajib Diisi" required></input-validation>
+                        <input-validation label="${msg("Kata Sandi")}" type="password" inputId="validationCustomPassword" invalidFeedbackMessage="Wajib Diisi" required></input-validation>
+                        <input-validation label="${msg("Konfirmasi Kata Sandi")}" type="password" inputId="validationConfirmationPassword" invalidFeedbackMessage="Wajib Diisi" required></input-validation>
 
                         <div class="col-12 text-end">
                             <button class="btn btn-general" type="submit" id="submit-button">
@@ -86,6 +88,7 @@ class LoginRegister extends CustomLitElementWSD {
                 </div>
             </div>
         </div>
+        <modal-message modalId="register-modal"></modal-message>
         `;
     }
 }

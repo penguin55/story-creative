@@ -1,0 +1,11 @@
+@use '../../variables' as var;
+
+modal-message {
+    .modal {
+        width: fit-content;
+        padding-inline: 1em;
+        min-height: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

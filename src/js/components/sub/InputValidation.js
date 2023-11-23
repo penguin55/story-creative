@@ -47,13 +47,14 @@ class InputValidation extends CustomLitElementWSD {
                 placeholder=""/>
             <label for="${this.inputId || nothing}">${this.label}</label>
             ${this._validFeedbackTemplate()}
-            <div class="invalid-feedback">${this.invalidFeedbackMessage}</div>
+            <div class="ms-2 invalid-feedback">${this.invalidFeedbackMessage}</div>
+            <span id="feedback-${this.inputId || nothing}" class="d-none text-danger"></span>
     `;
     }
 
     _validFeedbackTemplate() {
         if (this.validFeedbackMessage) {
-            return html` <div class="valid-feedback">${this.validFeedbackMessage}</div> `;
+            return html` <div class="valid-feedback ms-2">Test${this.validFeedbackMessage}</div> `;
         }
 
         return html``;

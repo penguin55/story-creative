@@ -3,6 +3,8 @@ import CheckUserAuth from "./CheckUserAuth";
 import Utils from "../../utils/utils";
 import Config from "../../network/config/config";
 
+import * as bootstrap from 'bootstrap';
+
 const Login = {
     async init() {
         CheckUserAuth.checkLoginState();
@@ -36,6 +38,9 @@ const Login = {
         const submitButton = document.querySelector('#submit-button');
         const spinner = document.querySelector('#spinner');
         const buttonText = document.querySelector('#button-text');
+        const popupModal = document.querySelector('#login-modal');
+
+        const loginModal = new bootstrap.Modal(popupModal, {});
 
         submitButton.setAttribute('disabled', true);
         spinner.classList.remove('visually-hidden');
@@ -53,7 +58,10 @@ const Login = {
                 
                 this._goToDashboardPage();
             } catch (error) {
-                console.error(error);
+                popupModal.parentElement.modalType = 'error';
+                popupModal.parentElement.message = error.response.data.message;
+
+                loginModal.show();
                 submitButton.removeAttribute('disabled');
                 spinner.classList.add('visually-hidden');
                 buttonText.classList.remove('visually-hidden');

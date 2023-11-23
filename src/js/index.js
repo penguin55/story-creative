@@ -2,7 +2,6 @@
 import '../sass/main.scss';
 
 // Import javascript file as needed
-import * as bootstrap from 'bootstrap';
 import './scroll';
 
 //  Import Components

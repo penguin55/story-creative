@@ -19,7 +19,7 @@ class NavLinks extends CustomLitElementWSD {
         console.log(this.activeNav);
         return html`
             <slot name="locale-picker"/>
-            <nav>
+            <nav id='nav'>
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a class="nav-link ${this.activeNav == "home" ? "active" : ""}" href="/">${msg(`Halaman Utama`)}</a></li>
                     <li class="nav-item"><a class="nav-link ${this.activeNav == "add_story" ? "active" : ""}" href="/addStory.html">${msg(`Tambah Cerita`)}</a></li>
