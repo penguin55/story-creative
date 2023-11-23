@@ -34,3 +34,19 @@ nav ul {
     gap: 1.5em;
     justify-content: right;
 }
+
+@media screen and (max-width: 1024px) {
+    nav-links {
+        flex-direction: column;
+        justify-content: center;
+
+        .nav {
+            flex-direction: column;
+        }
+    }
+
+    #localization {
+        order: 1;
+        height: 44.8px;
+    }
+}
